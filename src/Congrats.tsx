@@ -1,5 +1,4 @@
 import React from "react";
-
 /**
  * Functional react component for congratulatory message.
  * @function
@@ -9,7 +8,8 @@ import React from "react";
 type Props = {
   success?: boolean;
 };
-export default (props: Props) => {
+
+const Congrats = (props: Props) => {
   if (props.success) {
     return (
       <div data-test="component-congrats">
@@ -22,3 +22,5 @@ export default (props: Props) => {
     return <div data-test="component-congrats" />;
   }
 };
+
+export default Congrats;

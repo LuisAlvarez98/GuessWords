@@ -17,7 +17,16 @@ function Input(props: Props) {
           value={currentGuess}
           onChange={(event) => setCurrentGuess(event.target.value)}
         />
-        <button data-test="submit-button" className="btn btn-primary mb-2">
+        <button
+          data-test="submit-button"
+          className="btn btn-primary mb-2"
+          onClick={(event) => {
+            event.preventDefault();
+            //TO DO :Update guessedWords
+            // TO DO : check against secretWord and update success if needed.
+            setCurrentGuess("");
+          }}
+        >
           Submit
         </button>
       </form>
